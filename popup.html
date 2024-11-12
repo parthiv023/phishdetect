@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phish Detect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='popup.js') }}" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/style.css">
+    <style>
+        body {
+            margin: 0;
+            min-height: 400px;
+            min-width: 400px;
+            background-image: url('https://i.postimg.cc/RFLCC60z/22.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .logo {
+            width: auto;
+            height: 100px;
+            margin: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(0, 51, 102, 0.9);
+            padding: 10px 0;
+            position: absolute;
+            top: 130px;
+            width: 100%;
+        }
+
+        .navbar a {
+            font-size: 16px;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #004080;
+        }
+
+        .wrap {
+            display: inline-block;
+            width: 30%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .search {
+            width: 100%;
+            position: relative;
+        }
+
+        .searchTerm {
+            width: 100%;
+            padding: 10px;
+            height: 40px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            color: #003366;
+        }
+
+        .searchButton {
+            position: absolute;
+            right: 0;
+            width: 100px;
+            height: 40px;
+            border: none;
+            background: #004080;
+            text-align: center;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .searchButton:hover {
+            background: #0059b3;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.postimg.cc/Pf8HBkQM/Screenshot-2024-05-18-120914.png" alt="Phish Detect Logo" class="logo">
+    <div class="title">
+       
+    </div>
+    <form action="http://localhost:8000/check/" method="POST">
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" name="url" placeholder="Enter URL...">
+                <button type="submit" class="searchButton">CHECK</button>
+            </div>
+        </div>
+    </form>
+    <div class="navbar">
+        <a href="popup.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        
+    </div>
+    
+</body>
+</html>
