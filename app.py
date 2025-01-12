@@ -10,7 +10,7 @@ import requests
 app = Flask(__name__, template_folder="Extension")
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['EXCEL_FILE'] = 'contact_data.xlsx'
-VIRUSTOTAL_API_KEY = '30b89558bec1e76cbc19ddca6d5537316d72c9bd00ec73b823e9b7c8d2592ec9'  
+VIRUSTOTAL_API_KEY = '''<use your virus total api key>'''  
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
